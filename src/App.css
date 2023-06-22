@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.home-container {
+  position: relative;
+}
+
+.dark-background {
+  position: relative;
+}
+
+.image-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 90px;
+}
+
+@media (max-width: 600px) {
+  .image-text {
+    font-size: 18px;
+  }
+}

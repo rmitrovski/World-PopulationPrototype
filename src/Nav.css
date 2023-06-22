@@ -1,0 +1,70 @@
+/* Nav.css */
+body {
+  margin: 0;
+}
+
+.navbar {
+  background-color: rgb(0, 0, 108);
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: lightblue;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(195, 0, 0);
+  margin: 5px;
+  transition: 0.4s;
+}
+
+.navbar.open a {
+  display: block;
+}
+
+.navbar.open .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.open .line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 600px) {
+  .navbar a {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar.open {
+    background-color: rgb(0, 0, 108); /* Keep the background color blue when hamburger menu is active */
+  }
+}
